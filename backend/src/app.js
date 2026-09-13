@@ -16,10 +16,11 @@ function createApp() {
 
   app.use(
     cors({
-      origin: process.env.FRONTEND_ORIGIN || "http://localhost:5173",
+      origin: process.env.FRONTEND_ORIGIN || true,
       credentials: true
     })
   );
+
   app.use(express.json({ limit: "10mb" }));
 
   app.use("/api/auth", authRouter);
