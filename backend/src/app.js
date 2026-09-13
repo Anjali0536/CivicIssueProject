@@ -16,7 +16,7 @@ function createApp() {
 
   app.use(
     cors({
-      origin: process.env.FRONTEND_ORIGIN || true,
+      origin: process.env.FRONTEND_ORIGIN || "http://localhost:5173",
       credentials: true
     })
   );
